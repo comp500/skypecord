@@ -44,7 +44,7 @@ discord.on("ready", () => {
 		console.log("Discord channel ready!");
 		discordChannel = channel;
 		discord.on("messageCreate", function (msg) {
-			if (msg.channel.id == discordChannel.id) {
+			if (msg.channel.id == discordChannel.id && msg.author.id != discord.user.id) {
 				var matches = /\s*\[(\S+)\]\s*(\S*)/i.exec(msg.content);
 				var message = null;
 				if (matches == null) {
