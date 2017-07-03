@@ -32,3 +32,7 @@ When you reply, it will (by default) send the reply to the person who last messa
 If you want to change this, put the conversation ID in brackets before your message, in the same format that the bot sends messages to you. Once you have changed this, it will be the default for future messages unless you send a message or get a message from someone else.
 
 The easiest way to get the conversation ID is for someone to message you from that conversation. For direct messages, the conversation ID is 8:username where username is the skype username of who you want to message.
+
+## Future features
+- [ ] Aliases for conversation IDs
+- [ ] Contact/recents listing command
