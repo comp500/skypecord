@@ -1,0 +1,11 @@
+{
+  "name": "skypecord",
+  "version": "1.0.0",
+  "description": "Web Skype to Discord text chat bridge",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "comp500",
+  "license": "MIT"
+}
