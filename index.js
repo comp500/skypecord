@@ -59,7 +59,7 @@ discord.on("ready", () => {
 					message = matches[2];
 				}
 				if (message != null) {
-					if (skypeReady) {
+					if (skywebReady) {
 						skyweb.sendMessage(lastID, message);
 					} else {
 						skypeQueue.push({
