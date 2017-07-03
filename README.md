@@ -10,14 +10,14 @@ Skype to Discord bridge, made with node.js.
 5. Right click your username in the user list of a server, and click Copy ID.
 
 6. Create a file called creds.json in the directory above where you cloned this repo.
-Put this in it, replacing the appropriate fields (remove the square brackets) with your skype username, password, discord bot user token and your user ID you copied earlier.
+Put this in it, replacing the appropriate fields with your skype username, password, discord bot user token and your user ID you copied earlier.
 
 ```javascript
 {
-	"skypeuser": "[SKYPE_USERNAME]",
-	"skypepass": "[SKYPE_PASSWORD]",
-	"discordtoken": "[DISCORD_TOKEN]",
-	"discorduser": "[DISCORD_ID]"
+	"skypeuser": "skype username",
+	"skypepass": "skype password",
+	"discordtoken": "discord bot user token",
+	"discorduser": "discord user id"
 }
 ```
 
@@ -31,4 +31,4 @@ When you reply, it will (by default) send the reply to the person who last messa
 
 If you want to change this, put the conversation ID in brackets before your message, in the same format that the bot sends messages to you. Once you have changed this, it will be the default for future messages unless you send a message or get a message from someone else.
 
-The easiest way to get the conversation ID is for someone to message you from that conversation.
+The easiest way to get the conversation ID is for someone to message you from that conversation. For direct messages, the conversation ID is 8:username where username is the skype username of who you want to message.
