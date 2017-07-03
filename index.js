@@ -39,30 +39,33 @@ skyweb.messagesCallback = (messages) => {
 };
 
 discord.on("ready", () => {
+	console.log("Discord client ready!");
 	discord.getDMChannel(creds.discorduser).then(function (channel) {
-		console.log("Discord ready!");
+		console.log("Discord channel ready!");
 		discordChannel = channel;
 		discord.on("messageCreate", function (msg) {
-			var matches = /\s*\[(\S+)\]\s*(\S*)/i.exec(msg.content);
-			var message = null;
-			if (matches == null) {
-				if (lastID == null) {
-					discordChannel.createMessage("Message failed to send. Ensure you specify channel ID.");
+			if (msg.channel.id == discordChannel.id) {
+				var matches = /\s*\[(\S+)\]\s*(\S*)/i.exec(msg.content);
+				var message = null;
+				if (matches == null) {
+					if (lastID == null) {
+						discordChannel.createMessage("Message failed to send. Ensure you specify channel ID.");
+					} else {
+						message = msg.content;
+					}
 				} else {
-					message = msg.content;
+					lastID = matches[1];
+					message = matches[2];
 				}
-			} else {
-				lastID = matches[1];
-				message = matches[2];
-			}
-			if (message) {
-				if (skypeReady) {
-					skyweb.sendMessage(lastID, message);
-				} else {
-					skypeQueue.push({
-						id: lastID,
-						message: message
-					});
+				if (message != null) {
+					if (skypeReady) {
+						skyweb.sendMessage(lastID, message);
+					} else {
+						skypeQueue.push({
+							id: lastID,
+							message: message
+						});
+					}
 				}
 			}
 		});
