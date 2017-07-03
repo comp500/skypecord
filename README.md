@@ -23,3 +23,8 @@ Put this in it, replacing the appropriate fields with your skype username, passw
 
 7. Run `npm install` in the directory of your bot, and let it install the required dependencies
 8. Run the bot with `node index.js`
+
+## Usage
+Get someone to send a message to you. It should get sent to discord.
+
+WIP
