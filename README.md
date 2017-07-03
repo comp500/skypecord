@@ -25,7 +25,7 @@ Put this in it, replacing the appropriate fields (remove the square brackets) wi
 8. Run the bot with `node index.js`
 
 ## Usage
-Get someone to send a message to you. It should get sent to discord, in the following format: "[8:user] hi".
+Get someone to send a message to you. It should get sent to discord, in the following format: "[conversation ID] hi".
 
 When you reply, it will (by default) send the reply to the person who last messaged you, unless the bot was only just started.
 
