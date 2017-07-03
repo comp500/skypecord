@@ -77,7 +77,17 @@ discord.on("ready", () => {
 				discordChannel.createMessage(discordQueue[i]);
 			}
 		}
+	}).catch(function (e) {
+		console.error(e);
 	});
+});
+
+discord.on("error", function (e) {
+	console.error(e);
+});
+
+skyweb.on("error", function (e) {
+	console.error(e);
 });
 
 discord.connect();
