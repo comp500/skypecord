@@ -18,7 +18,8 @@ Put this in it, replacing the appropriate fields with your skype username, passw
 	"skypepass": "[SKYPE_PASSWORD]",
 	"discordtoken": "[DISCORD_TOKEN]",
 	"discorduser": "[DISCORD_ID]"
-}```
+}
+```
 
 7. Run `npm install` in the directory of your bot, and let it install the required dependencies
 8. Run the bot with `node index.js`
