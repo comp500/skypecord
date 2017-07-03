@@ -49,6 +49,7 @@ discord.on("ready", () => {
 				var message = null;
 				if (matches == null) {
 					if (lastID == null) {
+						console.log(msg.content);
 						discordChannel.createMessage("Message failed to send. Ensure you specify channel ID.");
 					} else {
 						message = msg.content;
