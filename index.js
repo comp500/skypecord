@@ -3,6 +3,8 @@ const Skyweb = require('skyweb');
 const Eris = require("eris");
 const creds = require('./creds.json');
 
+console.log(creds.discordtoken);
+
 var skyweb = new Skyweb();
 var discord = new Eris(creds.discordtoken);
 var skywebReady = false;
@@ -26,7 +28,6 @@ skyweb.login(creds.skypeuser, creds.skypepass).then(function (skypeAccount) {
 
 skyweb.messagesCallback = (messages) => {
     messages.forEach((message) => {
-		console.log("Incoming skype: " + message.resource.content);
         if (message.resource.from.indexOf(creds.skypeuser) === -1 && message.resource.messagetype !== 'Control/Typing' && message.resource.messagetype !== 'Control/ClearTyping') {
 			var conversationLink = message.resource.conversationLink;
             var conversationId = conversationLink.substring(conversationLink.lastIndexOf('/') + 1);
@@ -46,7 +47,6 @@ discord.on("ready", () => {
 		console.log("Discord channel ready!");
 		discordChannel = channel;
 		discord.on("messageCreate", function (msg) {
-			console.log("Incoming discord: " + msg.content);
 			if (msg.channel.id == discordChannel.id && msg.author.id != discord.user.id) {
 				var matches = /\s*\[(\S+)\]\s*([\s\S]*)/i.exec(msg.content);
 				var message = null;
