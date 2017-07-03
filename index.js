@@ -29,6 +29,7 @@ skyweb.messagesCallback = (messages) => {
         if (message.resource.from.indexOf(creds.skypeuser) === -1 && message.resource.messagetype !== 'Control/Typing' && message.resource.messagetype !== 'Control/ClearTyping') {
 			var conversationLink = message.resource.conversationLink;
             var conversationId = conversationLink.substring(conversationLink.lastIndexOf('/') + 1);
+			lastID = conversationId;
 			if (discordReady) {
 				discordChannel.createMessage("[" + conversationId + "] " + message.resource.content);
 			} else {
@@ -45,7 +46,7 @@ discord.on("ready", () => {
 		discordChannel = channel;
 		discord.on("messageCreate", function (msg) {
 			if (msg.channel.id == discordChannel.id && msg.author.id != discord.user.id) {
-				var matches = /\s*\[(\S+)\]\s*(\S*)/i.exec(msg.content);
+				var matches = /\s*\[(\S+)\]\s*([\s\S]*)/i.exec(msg.content);
 				var message = null;
 				if (matches == null) {
 					if (lastID == null) {
