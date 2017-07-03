@@ -11,5 +11,9 @@
   "dependencies": {
     "eris": "^0.7.0",
     "skyweb": "^0.3.1"
+  },
+  "repository": {
+    "type" : "git",
+    "url" : "https://github.com/comp500/skypecord.git"
   }
 }
