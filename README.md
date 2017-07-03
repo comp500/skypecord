@@ -10,7 +10,7 @@ Skype to Discord bridge, made with node.js.
 5. Right click your username in the user list of a server, and click Copy ID.
 
 6. Create a file called creds.json in the directory above where you cloned this repo.
-Put this in it, replacing the appropriate fields with your skype username, password, discord bot user token and your user ID you copied earlier.
+Put this in it, replacing the appropriate fields (remove the square brackets) with your skype username, password, discord bot user token and your user ID you copied earlier.
 
 ```javascript
 {
