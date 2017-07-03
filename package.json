@@ -7,5 +7,9 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "comp500",
-  "license": "MIT"
+  "license": "MIT",
+  "dependencies": {
+    "eris": "^0.7.0",
+    "skyweb": "^0.3.1"
+  }
 }
