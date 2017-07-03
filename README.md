@@ -9,7 +9,7 @@ Skype to Discord bridge, made with node.js.
 4. Enable developer mode in discord, by going to User Settings -> Appearance -> Developer Mode
 5. Right click your username in the user list of a server, and click Copy ID.
 
-6. Create a file called creds.json in the directory above where you cloned this repo.
+6. Create a file called creds.json in the directory where you cloned this repo.
 Put this in it, replacing the appropriate fields with your skype username, password, discord bot user token and your user ID you copied earlier.
 
 ```javascript

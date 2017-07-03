@@ -1,7 +1,7 @@
 // require bots
 const Skyweb = require('skyweb');
 const Eris = require("eris");
-const creds = require('../creds.json');
+const creds = require('./creds.json');
 
 var skyweb = new Skyweb();
 var discord = new Eris(creds.discordtoken);
