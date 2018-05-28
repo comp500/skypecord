@@ -3,8 +3,6 @@ const Skyweb = require('skyweb');
 const Eris = require("eris");
 const creds = require('./creds.json');
 
-console.log(creds.discordtoken);
-
 var skyweb = new Skyweb();
 var discord = new Eris(creds.discordtoken);
 var skywebReady = false;
