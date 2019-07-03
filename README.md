@@ -2,6 +2,8 @@
 
 Skype to Discord bridge, made with node.js.
 
+**As of 3rd July 2019, this repository has been archived. This is because it has many security vulnerabilities in it's dependencies, and it uses an unofficial API that probably doesn't work anymore anyway. Feel free to fork it if you want to continue it.**
+
 ## Setup
 1. Install [node.js and npm](https://nodejs.org/en/).
 2. Create a discord bot at https://discordapp.com/developers/applications/me and create a Bot User.
